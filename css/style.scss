@@ -1,0 +1,816 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face {
+    font-family: jost;
+    src: url('../Jost/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	// font-size: 100%;
+	// font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*phone styles*/
+
+*{
+    font-family: 'jost', sans-serif;
+}
+
+// BANNER SECTION
+#banner{
+    background: dimgray;
+    width: 100%;
+    height: 70vh;
+    background-image: url("../images/landing/banner.jpg");
+    background-size: cover;
+    background-position-x: -120px;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    nav{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .hamburger{
+            height: 30px;
+            width: 30px;
+            border: 2px solid #A40F1E;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .line{
+                height: 2px;
+                width: 70%;
+                background: #A40F1E;
+            }
+        }
+    }
+
+    .mobile-nav{
+        img{
+            width: 7rem;
+        }
+    }
+
+    .pc-nav{
+        display: none;
+    }
+}
+
+// WHY US SECTION
+#why{
+    padding: 3rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .container{
+        .row{
+            .left{
+                img{
+                    width: 100%;
+                }
+                
+                .why-cards{
+                    display: flex;
+                    background: transparent;
+                    justify-content: space-around;
+                    margin-top: -2rem;
+                    .card{
+                        height: 6rem;
+                        width: 7rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: #A40F1E;
+                        border-radius: 0;
+                        border: 2px solid white;
+                        
+                        p{
+                            color: white;
+                            font-weight: 700;
+                        }
+                        p:hover{
+                            letter-spacing: 1px;
+                            font-size: 20px;
+                        }
+
+                    }
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 2rem;
+
+                h2{
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #A40F1E;
+                }
+                p{
+                    line-height: 20px;
+                    font-size: 17px;
+                }
+                .text{
+                    font-weight: 600;
+
+                    .brown{
+                        color: #A40F1E;
+                    }
+                }
+                .btn{
+                    background: transparent;
+                    color: white;
+                    width: fit-content;
+                    width: -moz-fit-content;
+                    border-radius: 0;
+                    padding: 5px 20px;
+                    border: 3px solid #A40F1E;
+
+                    a{
+                        color: #A40F1E;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+
+                .btn:hover{
+                    background: #A40F1E;
+
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PORTFOLIO SECTION
+#portfolio{
+    padding-bottom: 3rem;
+    .container{
+        .row{
+            .left{
+                background: #A40F1E;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                align-items: center;
+                justify-content: center;
+                padding: 5rem 0;
+
+                .heading{
+                    width: 70%;
+
+                    .h{
+                        font-size: 2rem;
+                    }
+                }
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 70%;
+                }
+
+                .icons{
+                    width: 70%;
+                }
+            }
+            .right{
+                background: blue;
+                
+
+                .images{
+                    display: flex;
+
+                    .project{
+                        background: dimgray;
+                        width: 32vw;
+                        height: 18vh;
+                        border: 0.5px solid #A40F1E;
+                        display: flex;
+                        align-items: end;
+                        background-size: cover;
+
+                        p{
+                            color: white;
+                            font-weight: 700;
+                            padding: 10px;
+                        }
+                    }
+
+                    .project:hover{
+                        background-blend-mode: overlay;
+                        p{
+                            transform:translateY(-6rem);
+                            transition: all 1.5s ease-in-out;
+                            font-weight: 900;
+                            font-size: 20px;
+                        }
+                    }
+
+                    .project1{
+                        background-image: url("../images/landing/project1.jpg");
+                    }
+                    .project2{
+                        background-image: url("../images/landing/project2.jpg");
+                    }
+                    .project3{
+                        background-image: url("../images/landing/project3.jpg");
+                    }
+                    .project4{
+                        background-image: url("../images/landing/project4.jpg");
+                    }
+                    .project5{
+                        background-image: url("../images/landing/project5.jpg");
+                    }
+                    .project6{
+                        background-image: url("../images/landing/project6.jpg");
+                    }
+                }
+            }
+        }
+    }
+}
+
+#donate{
+    padding: 3rem 0;
+    color: white;
+    background: dimgray;
+    background-image: url("../images/landing/donate.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    .left{
+        padding: 0;
+        
+
+        .text{
+            width: 100%;
+            padding-bottom: 1rem;
+    
+            h2{
+                font-weight: 500;
+            }
+        }
+    
+        .form{
+            width: 100%;
+            input{
+                background: transparent;
+                border: 2px solid white;
+                height: 5vh;
+            }
+    
+            ::placeholder{
+                font-weight: 500;
+                color: white;
+            }
+    
+            button{
+                line-height: normal;
+                background: #A40F1E;
+                color: white;
+                border: none;
+                height: 5vh;
+                padding: 0 1rem;
+            }
+
+            button:hover{
+                background: white;
+                color: #A40F1E;
+                border: 2px solid #A40F1E;
+            }
+        }
+    }
+}
+
+#commitment{
+    padding: 3rem 0;
+
+    .container{
+        height: 120vh;
+        border: 2px solid brown;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        .text{
+            line-height: 30px;
+            font-weight: 400;
+            text-align: center;
+            width: 80%;
+            font-size: 20px;
+        }
+
+        .bold{
+            font-weight: 700;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    
+}
+
+#footer{
+    background: #A40F1E;
+    padding-top: 1rem;
+    color: white;
+    .container{
+        .row{
+            .right{
+                padding-top: 7px;
+                .row{
+                    padding-top: 7px;
+                    .text{
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        padding-bottom: 7px;
+                        width: 70%;
+                        .circle{
+                            width: 1px;
+                            height: 1px;
+                            border-radius: 50%;
+                            background: black;
+                            border: 7px solid grey;
+                            padding: 7px;
+                        }
+                    }
+                }
+            }
+
+            .center{
+                padding-top: 7px;
+                text-align: center;
+
+                .links{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0px;
+                    a{
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .left{
+                padding-top: 7px;
+            }
+        }
+    }
+}
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) { 
+    #banner{
+        height: 80vh;
+        background-position: -270px;
+    }
+
+    #why{
+        .container{
+            .row{
+                .left{
+                    img{
+                        width: 100%;
+                        height: 30vh;
+                    }
+                }
+                .right{
+                    margin-top: 0;
+                }
+            }
+        }
+    } 
+
+    #portfolio{
+        .container{
+            .row{
+                .left{
+                    gap: 1rem;
+                    padding: 0 0;
+                }
+                .right{
+                    .images{
+                        .project{
+                            width: 24vw;
+                            height: 18vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #donate{
+        padding: 3rem 0;
+        color: white;
+        background: dimgray;
+        background-image: url("../images/landing/donate.jpg");
+        background-size: cover;
+        background-blend-mode: multiply;
+    
+        .left{
+            padding: 0;
+            
+    
+            .text{
+                width: 100%;
+                padding-bottom: 1rem;
+        
+                h2{
+                    font-weight: 500;
+                }
+            }
+        
+            .form{
+                width: 100%;
+                input{
+                    background: transparent;
+                    border: 2px solid white;
+                    height: 5vh;
+                }
+        
+                ::placeholder{
+                    font-weight: 500;
+                    color: white;
+                }
+        
+                button{
+                    line-height: normal;
+                    background: brown;
+                    color: white;
+                    border: none;
+                    height: 5vh;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+
+    #commitment{
+        padding: 5rem 0;
+    
+        .container{
+            height: 60vh;
+        }
+    }
+
+    #footer{
+        .container{
+            .row{
+                .center{
+                    padding-top: 7px;
+                    text-align: left;
+                    
+                    .links{
+                        flex-direction: column;
+                        gap: 5px;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    // BANNER SECTION
+    #banner{
+        height: 100vh;
+        background-image: url("../images/landing/banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-position-x: 0;
+
+        .mobile-nav{
+            display: none;
+        }
+
+        .container{
+            width: 100%;
+            height: 15vh;
+            align-content: center;
+
+            .pc-nav{
+                display: block;
+                display: flex;
+                background: white;
+                height: fit-content;
+                box-shadow: 0 0 10px black;
+    
+                .nav-icons{
+                    width: 3rem;
+                    height: 3rem;
+                    background: #A40F1E;
+                }
+    
+                .center{
+                    width: 80%;
+    
+                    ul{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+    
+                        .link{
+                            width: 9rem;
+
+                            a{
+                                font-weight: 500;
+                                font-size: 20px;
+                                text-decoration: none;
+                                color: #A40F1E;
+                                
+                                img{
+                                    height: 2rem;
+                                }
+                            }
+
+                            a:hover{
+                            text-decoration: underline;
+                            }
+                        }
+                        
+                        .picture{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #why{
+        height: 100vh;
+
+        .container{
+            .row{
+                .left{
+                    img{
+                        height: auto;
+                    }
+                    .why-cards{
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+                        .card{
+                            height: 8rem;
+                            width: 9rem;
+                        }
+                    }
+                }
+                .right{
+                    gap: 25px;
+                }
+            }
+        }
+    }
+
+    #portfolio{
+        .container{
+            .row{
+                .left{
+                    padding: 3rem 0;
+                }
+                .right{
+                    .images{
+                        .project{
+                            width: 24vw;
+                            height: 40vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #donate{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        
+        .left{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        
+            .form{
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                input{
+                    height: 9vh;
+                    width: 61%;
+                    padding: 0 1rem;
+                }
+        
+                ::placeholder{
+                    font-weight: 500;
+                    color: white;
+                }
+        
+                button{
+                    height: 9vh;
+                    padding: 0 2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+   
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
+    #why{
+        .container{
+            .row{
+                .left{
+                    .why-cards{
+                        gap: 2rem;
+                        .card{
+                            height: 8rem;
+                            width: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #donate{
+        height: 70vh;
+        
+        .left{
+            gap: 3rem;
+        
+            .text{
+                h2{
+                    font-size: 43px;
+                    font-weight: 600;
+                    width: 95%;
+                }
+            }
+
+            .form{
+                gap: 30px;
+
+                input{
+                    height: 7vh;
+                    width: 65%;
+                }
+        
+                ::placeholder{
+                    font-weight: 500;
+                    color: white;
+                }
+        
+                button{
+                    height: 7vh;
+                    padding: 0 3rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    #portfolio{
+        .container{
+            .row{
+                .left{
+                    gap: 2rem;
+                    padding: 0 0;
+
+                    .heading{
+                        h2{
+                            font-size: 43px;
+                        }
+
+                        .h{
+                            font-size: 40px;
+                        }
+                    }
+
+                    .text{
+                        gap: 1rem;
+                        font-size: 18px;
+                    }
+                }
+                .right{
+                    .images{
+                        .project{
+                            width: 24.75vw;
+                            height: 30.2vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
